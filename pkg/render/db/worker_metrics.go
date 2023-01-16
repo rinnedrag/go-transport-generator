@@ -7,7 +7,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/wildberries-ru/go-transport-generator/pkg/api"
+	"github.com/rinnedrag/go-transport-generator/pkg/api"
 )
 
 const workerMetricsTpl = `// Package {{.PkgName}} ...

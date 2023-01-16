@@ -8,7 +8,7 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/wildberries-ru/go-transport-generator/pkg/api"
+	"github.com/rinnedrag/go-transport-generator/pkg/api"
 )
 
 const (

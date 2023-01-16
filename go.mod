@@ -1,4 +1,4 @@
-module github.com/wildberries-ru/go-transport-generator
+module github.com/rinnedrag/go-transport-generator
 
 go 1.15
 

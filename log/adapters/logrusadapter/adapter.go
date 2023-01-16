@@ -1,8 +1,8 @@
 package logrusadapter
 
 import (
+	"github.com/rinnedrag/go-transport-generator/log/logger"
 	"github.com/sirupsen/logrus"
-	"github.com/wildberries-ru/go-transport-generator/log/logger"
 )
 
 type adapter struct {

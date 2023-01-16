@@ -8,8 +8,8 @@ import (
 	"mime/multipart"
 	"time"
 
-	v1 "github.com/wildberries-ru/go-transport-generator/example/api/v1"
-	"github.com/wildberries-ru/go-transport-generator/log/logger"
+	v1 "github.com/rinnedrag/go-transport-generator/example/api/v1"
+	"github.com/rinnedrag/go-transport-generator/log/logger"
 )
 
 // loggingMiddleware wraps Service and logs request information to the provided logger

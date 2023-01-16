@@ -7,7 +7,7 @@ import (
 	easyjson "github.com/mailru/easyjson"
 	jlexer "github.com/mailru/easyjson/jlexer"
 	jwriter "github.com/mailru/easyjson/jwriter"
-	_v1 "github.com/wildberries-ru/go-transport-generator/example/api/v1"
+	_v1 "github.com/rinnedrag/go-transport-generator/example/api/v1"
 )
 
 // suppress unused package warning

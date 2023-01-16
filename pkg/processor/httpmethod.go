@@ -7,7 +7,7 @@ import (
 
 	"github.com/vetcher/go-astra/types"
 
-	"github.com/wildberries-ru/go-transport-generator/pkg/api"
+	"github.com/rinnedrag/go-transport-generator/pkg/api"
 )
 
 const (

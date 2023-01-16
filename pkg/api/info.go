@@ -3,7 +3,7 @@ package api
 import (
 	"github.com/vetcher/go-astra/types"
 
-	v1 "github.com/wildberries-ru/go-transport-generator/example/api/v1"
+	v1 "github.com/rinnedrag/go-transport-generator/example/api/v1"
 )
 
 // GenerationInfo present generation info

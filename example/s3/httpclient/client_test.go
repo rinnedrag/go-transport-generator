@@ -18,8 +18,8 @@ import (
 	"github.com/bxcodec/faker/v3"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
+	v1 "github.com/rinnedrag/go-transport-generator/example/api/v1"
 	"github.com/valyala/fasthttp"
-	v1 "github.com/wildberries-ru/go-transport-generator/example/api/v1"
 )
 
 func Test_client_CreateMultipartUpload(t *testing.T) {

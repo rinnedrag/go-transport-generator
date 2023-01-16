@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"net/http"
 
+	v1 "github.com/rinnedrag/go-transport-generator/example/api/v1"
 	"github.com/valyala/fasthttp"
-	v1 "github.com/wildberries-ru/go-transport-generator/example/api/v1"
 )
 
 type createMultipartUploadResponse struct {

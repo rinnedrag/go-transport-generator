@@ -1,8 +1,8 @@
 package zerologadapter
 
 import (
+	"github.com/rinnedrag/go-transport-generator/log/logger"
 	"github.com/rs/zerolog"
-	"github.com/wildberries-ru/go-transport-generator/log/logger"
 )
 
 type adapter struct {

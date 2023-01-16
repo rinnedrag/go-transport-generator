@@ -11,7 +11,7 @@ import (
 	"github.com/go-kit/kit/metrics"
 	kitprometheus "github.com/go-kit/kit/metrics/prometheus"
 	"github.com/prometheus/client_golang/prometheus"
-	v1 "github.com/wildberries-ru/go-transport-generator/example/api/v1"
+	v1 "github.com/rinnedrag/go-transport-generator/example/api/v1"
 )
 
 // instrumentingMiddleware wraps Service and enables request metrics

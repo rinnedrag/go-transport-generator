@@ -3,7 +3,7 @@ package s3
 import (
 	"context"
 
-	v1 "github.com/wildberries-ru/go-transport-generator/example/api/v1"
+	v1 "github.com/rinnedrag/go-transport-generator/example/api/v1"
 )
 
 // Service ...

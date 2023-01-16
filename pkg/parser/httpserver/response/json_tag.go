@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/wildberries-ru/go-transport-generator/pkg/api"
+	"github.com/rinnedrag/go-transport-generator/pkg/api"
 )
 
 var (

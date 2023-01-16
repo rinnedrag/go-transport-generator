@@ -9,7 +9,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/service/s3"
-	"github.com/wildberries-ru/go-transport-generator/log/logger"
+	"github.com/rinnedrag/go-transport-generator/log/logger"
 )
 
 // loggingMiddleware wraps Service and logs request information to the provided logger

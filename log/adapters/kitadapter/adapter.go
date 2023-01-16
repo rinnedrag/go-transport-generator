@@ -6,7 +6,7 @@ import (
 
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"
-	"github.com/wildberries-ru/go-transport-generator/log/logger"
+	"github.com/rinnedrag/go-transport-generator/log/logger"
 )
 
 type adapter struct {

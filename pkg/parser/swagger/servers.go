@@ -4,8 +4,8 @@ import (
 	"errors"
 	"strings"
 
-	v1 "github.com/wildberries-ru/go-transport-generator/example/api/v1"
-	"github.com/wildberries-ru/go-transport-generator/pkg/api"
+	v1 "github.com/rinnedrag/go-transport-generator/example/api/v1"
+	"github.com/rinnedrag/go-transport-generator/pkg/api"
 )
 
 const (

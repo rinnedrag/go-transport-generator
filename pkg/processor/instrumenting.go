@@ -3,7 +3,7 @@ package processor
 import (
 	"github.com/pkg/errors"
 
-	"github.com/wildberries-ru/go-transport-generator/pkg/api"
+	"github.com/rinnedrag/go-transport-generator/pkg/api"
 )
 
 type instrumenting struct {

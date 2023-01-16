@@ -3,7 +3,7 @@ package zapadapter
 import (
 	"fmt"
 
-	"github.com/wildberries-ru/go-transport-generator/log/logger"
+	"github.com/rinnedrag/go-transport-generator/log/logger"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )

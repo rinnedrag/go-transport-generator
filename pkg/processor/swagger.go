@@ -15,8 +15,8 @@ import (
 	"github.com/vetcher/go-astra"
 	"github.com/vetcher/go-astra/types"
 
-	v1 "github.com/wildberries-ru/go-transport-generator/example/api/v1"
-	"github.com/wildberries-ru/go-transport-generator/pkg/api"
+	v1 "github.com/rinnedrag/go-transport-generator/example/api/v1"
+	"github.com/rinnedrag/go-transport-generator/pkg/api"
 )
 
 const (
@@ -107,7 +107,7 @@ func (s *swagger) Process(info *api.GenerationInfo, iface *api.Interface) (err e
 			for to := range httpMethod.Body {
 				for _, arg := range method.Args {
 					if arg.Name == to {
-						prop, err = s.makeType(iface.RelOutputPath, arg, arg.Type) //todo pkgPath
+						prop, err = s.makeType(iface.RelOutputPath, arg, arg.Type) // todo pkgPath
 						if err != nil {
 							err = errors.Wrap(err, "[swagger.RequestBody]s.makeType error")
 							return
@@ -309,14 +309,14 @@ func (s *swagger) makeType(pkgPath string, field types.Variable, fieldType types
 	case types.TMap:
 		// todo
 		schema.Type = "object"
-		//key, err := s.makeType("", field, f.Key)
-		//if err != nil {
+		// key, err := s.makeType("", field, f.Key)
+		// if err != nil {
 		//	return
-		//}
-		//val, err := s.makeType("", field, f.Value)
-		//if err != nil {
+		// }
+		// val, err := s.makeType("", field, f.Value)
+		// if err != nil {
 		//	return
-		//}
+		// }
 	case types.TPointer:
 		schema, err = s.makeType(pkgPath, field, f.Next)
 		if err != nil {

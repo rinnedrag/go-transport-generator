@@ -7,7 +7,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/wildberries-ru/go-transport-generator/pkg/api"
+	"github.com/rinnedrag/go-transport-generator/pkg/api"
 )
 
 const loggingTpl = `// Package {{.PkgName}} ...
@@ -19,7 +19,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/wildberries-ru/go-transport-generator/log/logger"
+	"github.com/rinnedrag/go-transport-generator/log/logger"
 )
 
 // loggingMiddleware wraps Service and logs request information to the provided logger
