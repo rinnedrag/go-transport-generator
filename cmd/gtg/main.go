@@ -9,6 +9,7 @@ import (
 	"unicode"
 
 	"github.com/vetcher/go-astra/types"
+	"github.com/wildberries-ru/go-transport-generator/pkg/render/db"
 
 	v1 "github.com/wildberries-ru/go-transport-generator/example/api/v1"
 	"github.com/wildberries-ru/go-transport-generator/pkg/api"
@@ -34,6 +35,9 @@ const (
 	httpsClientInsecure  = "https-client-insecure"
 	httpErrors           = "http-errors"
 	instrumentingService = "metrics"
+	instrumentingDB      = "mp-metrics"
+	workerMetrics        = "worker-metrics"
+	baseMiddleware       = "base-middleware"
 	logService           = "log"
 	mockService          = "mock"
 	swagger              = "swagger"
@@ -84,6 +88,9 @@ var (
 	httpUIErrorsFilePath         = []string{"httperrors", "ui.go"}
 	httpClientErrorsFilePath     = []string{"httperrors", "client.go"}
 	serviceInstrumentingFilePath = []string{"instrumenting.go"}
+	dbInstrumentingFilePath      = []string{"instrumenting.go"}
+	workerInstrumentingFilePath  = []string{"instrumenting.go"}
+	baseMiddlewareFilePath       = []string{"middleware.go"}
 	serviceLoggingFilePath       = []string{"logging.go"}
 	serviceMockFilePath          = []string{"httpclient", "service_mock.go"}
 
@@ -275,6 +282,9 @@ func main() {
 	httpUIErrorsRender := httperrors.NewUI(t, httpErrorsPkgName, httpUIErrorsFilePath, imp)
 	httpClientErrorsRender := httperrors.NewClient(t, httpErrorsPkgName, httpClientErrorsFilePath, imp)
 	instrumentingRender := service.NewInstrumenting(t, serviceInstrumentingFilePath, imp)
+	instrumentingDBRender := db.NewInstrumenting(t, dbInstrumentingFilePath, imp)
+	instrumentingWorkerRender := db.NewWorkerMetrics(t, workerInstrumentingFilePath, imp)
+	baseRender := db.NewBase(t, baseMiddlewareFilePath, imp)
 	loggingRender := service.NewLogging(t, serviceLoggingFilePath, imp)
 	mockRender := service.NewMock(t, httpClientPkgName, serviceMockFilePath, imp)
 	swaggerRender := httpserver.NewSwagger(swaggerFilename)
@@ -309,6 +319,9 @@ func main() {
 		),
 		httpErrors:           processor.NewErrors(tagMark, httpUIErrorsRender, httpClientErrorsRender),
 		instrumentingService: processor.NewInstrumenting(instrumentingRender),
+		instrumentingDB:      processor.NewInstrumenting(instrumentingDBRender),
+		workerMetrics:        processor.NewInstrumenting(instrumentingWorkerRender),
+		baseMiddleware:       processor.NewInstrumenting(baseRender),
 		logService:           processor.NewLogging(loggingRender),
 		mockService:          processor.NewMock(mockRender),
 		swagger:              processor.NewSwagger(tagMark, httpMethodProcessor, swaggerMethodTagParser, mod.NewMod(), goGeneratedAutomaticallyPrefix),
